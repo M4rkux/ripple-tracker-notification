@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Ripple Tracker [Dev]",
+  "name": "Ripple (XRP) Tracker",
   "description": "This extension will help you to track the ripple price.",
   "version": "0.1",
 
