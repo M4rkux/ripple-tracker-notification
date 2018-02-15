@@ -3,7 +3,7 @@
 
   "name": "Ripple (XRP) Tracker",
   "description": "This extension will help you to track the ripple price.",
-  "version": "0.1",
+  "version": "1.0.0",
 
   "icons": {
     "16": "/assets/icon16.png",
@@ -12,8 +12,10 @@
   },
 
   "web_accessible_resources": [
-    "/assets/audio-ponto.mp3", 
-    "/assets/relogio-notification.png"
+    "/assets/positive-sound.mp3", 
+    "/assets/icon-notification.png",
+    "/assets/uparrow.png",
+    "/assets/downarrow.png"
   ],
 
   "browser_action": {
