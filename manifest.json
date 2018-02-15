@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ripple Tracker [Dev]",
+  "description": "This extension will help you to track the ripple price.",
+  "version": "0.1",
+
+  "icons": {
+    "16": "/assets/icon16.png",
+    "64": "/assets/icon64.png",
+    "128": "/assets/icon128.png"
+  },
+
+  "web_accessible_resources": [
+    "/assets/audio-ponto.mp3", 
+    "/assets/relogio-notification.png"
+  ],
+
+  "browser_action": {
+    "default_icon": "/assets/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "storage",
+    "notifications"
+  ]
+}

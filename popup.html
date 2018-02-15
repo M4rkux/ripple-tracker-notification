@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <link href="/estilo.css" rel="stylesheet"/>
+</head>
+<body id="body">
+    <h2>Ripple (XRP) Tracker</h2>
+
+    <div class="row">
+        <span id="usd_value" class="text-large2">$ 0.00</span>
+        <span class="details-text-medium">USD</span>
+        <span class="text-large2" id="percentage">(0%)</span>
+    </div>
+
+    <div class="row">
+        <span id="btc_value" class="text-gray details-text-medium">0.00000000</span>
+        <span class="text-gray details-text-medium">BTC</span>
+    </div>
+
+    <hr/>
+
+    <div class="row mt15">
+        <h3 class="mb0">Notification</h3>
+        <input type="checkbox" name="notificationPermission" id="notificationPermission" class="cbx hidden" />
+        <label for="notificationPermission" class="lbl notification-label"></label> 
+    </div>
+
+    <article class="notification-panel">
+        <div class="row mb15 mt10">
+            <label for="audioPermission">Audio</label>
+            <input type="checkbox" name="audioPermission" id="audioPermission" class="cbx hidden" disabled />
+            <label for="audioPermission" class="lbl"></label> 
+        </div>
+
+        <div class="row mt15">
+            Notify me when the price is
+        </div>
+
+        <div class="row mt5">
+            <span style="float: left">
+                <label for="priceHigher">Higher than:</label>
+                <input name="priceHigher" id="priceHigher" type="number" disabled>
+            </span>
+            <input type="checkbox" name="priceHigherPermission" id="priceHigherPermission" class="cbx hidden" disabled />
+            <label for="priceHigherPermission" class="lbl price-permission-notification"></label> 
+        </div>
+
+        <div class="row mt15 mb15">
+            <span style="float: left">
+                <label for="priceLower">Lower than:</label>
+                <input name="priceLower" id="priceLower" type="number" class="ml4" disabled>
+            </span>
+            <input type="checkbox" name="priceLowerPermission" id="priceLowerPermission" class="cbx hidden" disabled />
+            <label for="priceLowerPermission" class="lbl price-permission-notification"></label> 
+        </div>
+    </article>
+    
+
+    <small class="rodape" id="rodape"></small>
+
+    <script src="popup.js"></script>
+</body>
