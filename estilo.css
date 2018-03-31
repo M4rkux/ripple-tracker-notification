@@ -105,6 +105,10 @@ input[type=number] {
   width: 75px;
 }
 
+footer {
+  position: relative;
+}
+
 .rodape {
   text-align: right;
   padding-right: 5px;
@@ -116,7 +120,7 @@ input[type=number] {
   line-height: 1.1;
 }
 
-.details-text-medium { 
+.details-text-medium {
   font-size: 1.25em;
 }
 
@@ -156,4 +160,83 @@ input[type=number] {
 
 .notification-panel.disabled {
   color: #666;
+}
+
+details {
+  outline: none;
+}
+
+textarea {
+  position: absolute;
+}
+
+details summary {
+  outline: none;
+  color: grey;
+  cursor: pointer;
+}
+
+details[open] summary, summary:hover {
+  color: black;
+}
+
+.donation {
+  position: absolute;
+  text-align: left;
+}
+
+button.copy {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  overflow: hidden;
+  opacity: 0.54;
+  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url(assets/ic_content_copy_black_18px.svg) center center no-repeat;
+}
+
+span.shadow {
+  text-shadow: 0 0 10px blue;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -54px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: 14px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

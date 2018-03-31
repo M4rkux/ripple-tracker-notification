@@ -21,14 +21,14 @@
     <div class="row mt15">
         <h3 class="mb0">Notification</h3>
         <input type="checkbox" name="notificationPermission" id="notificationPermission" class="cbx hidden" />
-        <label for="notificationPermission" class="lbl notification-label"></label> 
+        <label for="notificationPermission" class="lbl notification-label"></label>
     </div>
 
     <article class="notification-panel">
         <div class="row mb15 mt10">
             <label for="audioPermission">Audio</label>
             <input type="checkbox" name="audioPermission" id="audioPermission" class="cbx hidden" disabled />
-            <label for="audioPermission" class="lbl"></label> 
+            <label for="audioPermission" class="lbl"></label>
         </div>
 
         <div class="row mt15">
@@ -41,7 +41,7 @@
                 <input name="priceHigher" id="priceHigher" type="number" disabled>
             </span>
             <input type="checkbox" name="priceHigherPermission" id="priceHigherPermission" class="cbx hidden" disabled />
-            <label for="priceHigherPermission" class="lbl price-permission-notification"></label> 
+            <label for="priceHigherPermission" class="lbl price-permission-notification"></label>
         </div>
 
         <div class="row mt15 mb15">
@@ -50,12 +50,22 @@
                 <input name="priceLower" id="priceLower" type="number" class="ml4" disabled>
             </span>
             <input type="checkbox" name="priceLowerPermission" id="priceLowerPermission" class="cbx hidden" disabled />
-            <label for="priceLowerPermission" class="lbl price-permission-notification"></label> 
+            <label for="priceLowerPermission" class="lbl price-permission-notification"></label>
         </div>
     </article>
-    
 
-    <small class="rodape" id="rodape"></small>
 
+    <footer class="rodape">
+      <details class="donation">
+        <summary>Donation</summary>
+          <span id="address"></span>
+          <div class="tooltip">
+            <button class="copy" aria-label="Copy" id="btCopy">
+              <span class="tooltiptext" id="myTooltip">Copy</span>
+            </button>
+        </div>
+      </details>
+      <small id="version"></small>
+    </footer>
     <script src="popup.js"></script>
 </body>

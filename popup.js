@@ -2,7 +2,9 @@ let promises = [];
 
 const manifest = chrome.runtime.getManifest();
 const devMode = manifest.name.indexOf('[Dev]') > -1;
-document.getElementById('rodape').innerHTML = (devMode ? '[Dev] ' : '') + 'v'+manifest.version;
+const WALLET_ADDRESS = 'rNXDEjtgEWX842ozWWnVwgS8NEUnNLyTaL';
+document.getElementById('version').innerHTML = (devMode ? '[Dev] ' : '') + 'v'+manifest.version;
+document.getElementById('address').innerText = WALLET_ADDRESS;
 
 chrome.runtime.sendMessage({update: true});
 
@@ -70,7 +72,7 @@ chrome.storage.onChanged.addListener(function(changes) {
     }
 });
 
-/* FUNÇÃO PARA SALVAR A PERMISSÃO DE ÁUDIO */
+/* FUNÇÃO PARA SALVAR AS PERMISSÕES */
 document.getElementById('audioPermission').addEventListener('change', saveAudioPermission);
 document.getElementById('notificationPermission').addEventListener('change', changeNotificationPermission);
 document.getElementById('priceHigherPermission').addEventListener('change', changeNotificationHigherPermission);
@@ -141,3 +143,27 @@ function saveAudioPermission(e) {
         console.log('Audio ' + (e.target.checked ? 'Enabled' : 'Disabled'));
     });
 }
+
+var btnCopy = document.getElementById('btCopy');
+
+btnCopy.addEventListener('mouseover', function () {
+  document.getElementById('address').classList.add('shadow');
+});
+
+btnCopy.addEventListener('click', function () {
+  let txt = document.createElement('textarea');
+  document.body.appendChild(txt);
+  txt.value = WALLET_ADDRESS;
+  txt.focus();
+  txt.select();
+  document.execCommand('copy');
+  txt.remove();
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied!";
+});
+
+document.getElementById('btCopy').addEventListener('mouseout', function () {
+  document.getElementById('address').classList.remove('shadow');
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy";
+});
